@@ -2,6 +2,7 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  base : "https://izakhearn.github.io/WDD330-Final-Project/",
   root: "src/",
   build: {
     outDir: "../dist/",
