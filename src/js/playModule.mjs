@@ -1,4 +1,5 @@
 import { loadTemplate, renderWithTemplate, loadJSON } from "./utils.mjs";
+import Trivia from "./trivia.mjs";;
 
 export default class Quiz {
   constructor(category, difficulty, amount) {
@@ -13,33 +14,18 @@ export default class Quiz {
   }
 
   async loadQuestions() {
-    const data = await loadJSON(`../json/trivia_test.json`);
+    const data = await new Trivia().getQuestions(this.category, this.difficulty, this.amount);
     for (const question of data.results) {
       question.choices = question.incorrect_answers;
       question.choices.push(question.correct_answer);
       question.choices = question.choices.sort();
     }
     return data;
-    // let questions = [];
-    // for (const question of data.results){
-    //     questions.push(question);
-    // }
-    // let answers = [];
-    // for (const answer of data.results){
-    //     answers.push(answer.correct_answer);
-    // }
-    // let choices = [];
-    // for (const choice of data.results){
-    //     choices.push(choice.incorrect_answers+","+choice.correct_answer);
-    // }
-    // console.log(choices);
-    // console.log(answers);
-    // console.log(questions);
   }
 
   async renderQuestions(data) {
     const template = await loadTemplate("../partials/quiz.html");
-    const main = document.querySelector("main");
+    const main = document.querySelector(".quiz__container");
     let questions = data.results
     for (let i = 0; i < questions.length; i++) {
       const div = document.createElement("div");
@@ -54,7 +40,7 @@ export default class Quiz {
       main.appendChild(div);
       const question = questions[i];
       const questionDiv = document.querySelector(`.${qclass}`);
-      questionDiv.querySelector(".question").textContent = question.question;
+      questionDiv.querySelector(".question").innerHTML = question.question;
       const choices = question.choices;
       const choicesDiv = questionDiv.querySelector(".answers");
       for (let j = 0; j < choices.length; j++) {
@@ -66,7 +52,7 @@ export default class Quiz {
         input.id = `choice-${j}`;
         const label = document.createElement("label");
         label.htmlFor = input.id;
-        label.textContent = choice;
+        label.innerHTML = choice;
         choicesDiv.appendChild(input);
         choicesDiv.appendChild(label);
       }
@@ -96,4 +82,17 @@ export default class Quiz {
 
     }
   }
+}
+
+export function showCategories(){
+  const trivia = new Trivia();
+  trivia.getCategories().then(data => {
+    const select = document.querySelector(".category");
+    for (const category of data.trivia_categories){
+      const option = document.createElement("option");
+      option.value = category.id;
+      option.textContent = category.name;
+      select.appendChild(option);
+    }
+  });
 }

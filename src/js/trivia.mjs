@@ -1,8 +1,8 @@
-const api =  import.meta.env.VITE_SERVER_URL;
+
 
 export default class Trivia {
   constructor() {
-    this.api = api;
+    this.api =  "https://opentdb.com";
   }
 
   async getCategories() {
@@ -13,7 +13,7 @@ export default class Trivia {
   }
 
   async getQuestions(category, difficulty, amount) {
-    const url = `${this.api}/api/questions?category=${category}&difficulty=${difficulty}&amount=${amount}`;
+    const url = `${this.api}/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}`;
     const response = await fetch(url);
     const data = await response.json();
     return data;

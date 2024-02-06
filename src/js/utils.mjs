@@ -33,7 +33,6 @@ export function loadJSON(path) {
 export async function loadMenu() {
   const menu = document.querySelector(".menu");
   const menuItems = await loadJSON("../json/menu.json");
-  console.log(menuItems);
   for (const item of menuItems) {
     const menuItem = document.createElement("li");
     menuItem.innerHTML = `<a href="${item.url}">${item.name}</a>`;
