@@ -167,8 +167,6 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   padding: 2em;
-  margin-left: 10%;
-  margin-right: 10%;
   border: #535bf2 1px solid;
   border-radius: 8px;
   box-shadow: 0 0 2em #535bf2;
@@ -193,6 +191,7 @@ button:focus-visible {
   font-size: 1.2em;
   line-height: 1.5;
   margin-bottom: 1em;
+  width: 800px;
 }
 
 .question-container button {
