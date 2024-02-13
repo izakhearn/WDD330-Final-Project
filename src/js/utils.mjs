@@ -64,3 +64,11 @@ export function renderListWithTemplate(templateFn, parentElement, data, position
   const list = data.map((item) => templateFn(item));
   parentElement.insertAdjacentHTML(position, list.join(""));
 }
+
+export function setLocalStorage(key, value) {
+  localStorage.setItem(key , JSON.stringify(value));
+}
+
+export function getLocalStorage(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
