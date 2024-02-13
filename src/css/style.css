@@ -188,7 +188,7 @@ button:focus-visible {
   border-color: #646cff;
 }
 
-.quiz__options input{
+.quiz__options input {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -223,7 +223,7 @@ button:focus-visible {
   margin-bottom: 2em;
 }
 
-.quiz__info{
+.quiz__info {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -304,11 +304,11 @@ button:focus-visible {
   margin-right: 0.5em;
 }
 
-.question-container input[type="radio"]:checked+label {
+.question-container input[type="radio"]:checked + label {
   color: #646cff;
 }
 
-.question-container input[type="radio"]:focus-visible+label {
+.question-container input[type="radio"]:focus-visible + label {
   outline: 2px solid #646cff;
 }
 
