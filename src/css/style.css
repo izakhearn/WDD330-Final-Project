@@ -312,6 +312,75 @@ button:focus-visible {
   outline: 2px solid #646cff;
 }
 
+#quiz-name {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  text-align: center;
+}
+
+#quiz-name input {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #515151;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-bottom: 2%;
+}
+
+.question-accordion {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1em;
+  text-align: center;
+  margin-bottom: 2em;
+  border: #535bf2 1px solid;
+  border-radius: 8px;
+  box-shadow: 0 0 2em #535bf2;
+}
+
+.question-accordion h3 {
+  font-size: 1.2em;
+  line-height: 1.1;
+  margin-bottom: 1em;
+}
+
+.question__acc__content {
+  display: none !important;
+  padding: 2em;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.question__acc__content #buttons {
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+}
+
+.acc_question {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.question-accordion.active .question__acc__content {
+  display: block !important;
+}
+
 /* Mobile Resposive Medial Query */
 
 @media screen and (max-width: 600px) {
