@@ -381,6 +381,26 @@ button:focus-visible {
   display: block !important;
 }
 
+.quiz__type{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  text-align: center;
+}
+
+.quiz__type button {
+  margin: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #515151;
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+}
+
 /* Mobile Resposive Medial Query */
 
 @media screen and (max-width: 600px) {
