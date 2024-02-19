@@ -6,6 +6,7 @@
   "author": "Izak Hearn",
   "scripts": {
     "start": "vite",
+    "start-expose": "vite --host",
     "build": "vite build --emptyOutDir",
     "preview": "vite preview",
     "lint": "eslint  src/**/*.js",

@@ -9,6 +9,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "src/index.html"),
         play: resolve(__dirname, "src/play/index.html"),
+        manager: resolve(__dirname, "src/quiz-manager/index.html"),
       },
     },
   },

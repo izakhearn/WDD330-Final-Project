@@ -4,12 +4,12 @@
     "url": "/"
   },
   {
-    "name": "About",
-    "url": "/about"
+    "name": "Play",
+    "url": "/play/index.html"
   },
   {
-    "name": "Contact",
-    "url": "/contact"
+    "name": "Quiz Manager",
+    "url": "/quiz-manager/index.html"
   },
   {
     "name": "Play",

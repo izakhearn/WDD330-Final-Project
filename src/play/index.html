@@ -19,6 +19,20 @@
   <body>
     <header class="header"></header>
     <main>
+      <section class="quiz__type">
+        <h2>Choose Quiz Type</h2>
+        <button class="custom__quiz">Custom Quiz</button>
+        <button class="normal__quiz">Normal Quiz</button>
+      </section>
+      <section id="custom-quiz" class="hidden">
+        <div class="quiz__options">
+          <h3>Custom Quiz</h3>
+          <label for="quizName">Quiz Name</label>
+          <input class="quiz__name" id="quizName">
+          <button class="start__custom__quiz">Start Quiz</button>
+        </div>
+      </section>
+      <section id="normal-quiz" class="hidden">
       <div class="quiz__options">
         <h3>Quiz Options</h3>
         <label for="category">Category</label>
@@ -33,6 +47,7 @@
         <input type="number" id="amount" min="1" max="50" value="10" />
         <button class="start__quiz">Start Quiz</button>
       </div>
+    </section>
       <section class="play__field hidden">
         <div class="quiz__info container">
           <div class="quiz__countdown">
