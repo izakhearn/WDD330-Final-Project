@@ -559,11 +559,16 @@ button:focus-visible {
 /* Mobile Resposive Medial Query */
 
 @media screen and (max-width: 600px) {
+  :root {
+    font-size: 14px;
+  }
+
   .header {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     justify-content: center;
     text-align: center;
+    padding: 1em;
   }
 
   .header .logo {
@@ -571,7 +576,7 @@ button:focus-visible {
     grid-column: 1;
     justify-self: center;
     margin: 1%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   .menu {
@@ -584,8 +589,8 @@ button:focus-visible {
   .hero {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .hero__image {
@@ -602,5 +607,99 @@ button:focus-visible {
     grid-column: 1;
     justify-self: center;
     padding: 1em;
+  }
+
+  .quiz__options {
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  .quiz__options select,
+  .quiz__options input {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .quiz__options label {
+    font-size: 1em;
+  }
+
+  .play__field {
+    grid-template-columns: 1fr;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  .quiz__info {
+    padding: 1em;
+    margin-bottom: 1em;
+    margin-right: 5%;
+  }
+
+  .container {
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  .question-container {
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  .question-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  .question-container p {
+    font-size: 1em;
+    margin-bottom: 1em;
+    width: auto;
+  }
+
+  .question-container button {
+    margin-top: 1em;
+    font-size: 1em;
+  }
+
+  .question-container ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .question-container li {
+    margin-bottom: 1em;
+  }
+
+  .question-container label {
+    font-size: 1em;
+  }
+
+  .question-container input[type="radio"] {
+    margin-right: 0.5em;
+  }
+
+  .question-accordion h3 {
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+
+  .question__acc__content {
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  .question__acc__content #buttons {
+    padding-top: 0.5em;
+  }
+
+  .quiz__type {
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 0.5em 1em;
   }
 }

@@ -4,6 +4,11 @@ import { CustomQuiz, showCategories, TeamQuiz } from "./playModule.mjs";
 const customQuiz = document.querySelector(".custom__quiz");
 const normalQuiz = document.querySelector(".normal__quiz");
 
+const teamParam = new URLSearchParams(window.location.search).get("team");
+if (teamParam === "true") {
+  document.querySelector("#team-mode").checked = true;
+}
+
 customQuiz.addEventListener("click", () => {
   document.querySelector("#custom-quiz").classList.toggle("hidden");
   document.querySelector("#normal-quiz").classList.add("hidden");
